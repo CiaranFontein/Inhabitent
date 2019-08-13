@@ -18,6 +18,10 @@ body {
   background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+p {
+  padding: 10px;
+}
+
 blockquote,
 q {
   quotes: '' '';
@@ -54,6 +58,10 @@ li > ol {
   margin-left: $base__space-unit;
 }
 
+li {
+  margin: 20px;
+}
+
 dt {
   font-weight: bold;
 }
@@ -70,4 +78,19 @@ img {
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2 {
+  color: $color_purple_brand;
+}
+
+site-main {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
