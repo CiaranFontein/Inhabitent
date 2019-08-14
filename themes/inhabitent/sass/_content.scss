@@ -8,6 +8,10 @@
   flex-direction: row;
 }
 
+.content-area {
+  width: 100%;
+}
+
 .site-main {
   width: auto;
 }
@@ -23,14 +27,58 @@
   padding: 20px;
 }
 
-.content-area {
-  width: 75%;
-}
-
 .site-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.site-footer {
+  background: url("../../images/dark-wood.png");
+
+  a {
+    color: #fff;
+  }
+}
+
+.footer-block-elements {
+  display: flex;
+}
+
+.footer-block-element {
+  margin: 3rem 0px;
+  padding-right: 1.5rem;
+}
+
+.day-of-week {
+  font-weight: bold;
+}
+
+.footer-block-element:last-child {
+  padding-right: 0;
+  width: 50%;
+}
+
+.text-logo {
+  margin: 1rem 0px 0px;
+  text-align: right;
+
+  img {
+    height: auto;
+    max-width: 50%;
+  }
+}
+
+.copyright-message {
+  padding: 1.5rem 0px;
+  color: #fff;
+  text-align: center;
+  margin: 0px -107px 0px 0px;
+}
+
+.hero-image-header {
+  width: 100%;
+  height: 100vh;
 }
 
 /* Posts and pages */
@@ -101,6 +149,7 @@
 .comment-content a {
   word-wrap: break-word;
 }
+
 .bypostauthor {
   display: block;
 }
