@@ -8,17 +8,16 @@ a {
   color: $color_green_brand;
   text-decoration: none;
 
-  &:visited {
-    color: $color_green_brand;
-  }
   &:hover,
   &:focus,
   &:active {
     color: $color_purple_brand;
   }
+
   &:focus {
     outline: thin dotted;
   }
+
   &:hover,
   &:active {
     outline: 0;
@@ -28,105 +27,61 @@ a {
 /* Menus */
 
 .main-navigation {
-  clear: both;
-  display: block;
-  float: right;
-  width: auto;
+  display: flex;
+  font-family: Novecento Sans Web, sans-serif;
+  text-transform: uppercase;
 
   ul {
-    display: none;
+    display: block;
     list-style: none;
     margin: 0;
     padding-left: 0;
-
-    ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: $base__space-unit;
-      left: -999rem;
-      z-index: 99999;
-      padding: 30px;
-
-      ul {
-        left: -999rem;
-        top: 0;
-      }
-
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          left: 100%;
-        }
-      }
-
-      a {
-        width: 200px;
-      }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
-    }
-
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
-    }
   }
+
   li {
     float: left;
+    padding-left: 1.5rem;
     position: relative;
-    &:hover > a,
-    &.focus > a {
-    }
   }
+
   a {
     display: block;
     text-decoration: none;
   }
 
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a {
-  }
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
+  /* Small menu. */
+  .menu-toggle,
+  .main-navigation.toggled ul {
     display: block;
   }
-}
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-  .site-main & {
-    margin: 0 0 $base__space-unit;
-    overflow: hidden;
+  @media screen and (min-width: 768px) {
+    .menu-toggle {
+      display: none;
+    }
+
+    .main-navigation ul {
+      display: block;
+    }
   }
 
-  .nav-previous {
-    float: left;
-    width: 50%;
-  }
+  .comment-navigation,
+  .posts-navigation,
+  .post-navigation {
+    .site-main & {
+      margin: 0 0 $base__space-unit;
+      overflow: hidden;
+    }
 
-  .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
+    .nav-previous {
+      float: left;
+      width: 50%;
+    }
+
+    .nav-next {
+      float: right;
+      text-align: right;
+      width: 50%;
+    }
   }
 }
