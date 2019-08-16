@@ -32,8 +32,10 @@ $color_medium_grey: #808080;
 
 // Typography
 
-$font__main: sans-serif;
-$font__alt: arial;
+$font__main: 'Merriweather Web',
+serif;
+$font__alt: 'Novecento Sans Web',
+sans-serif;
 $font__code: Monaco,
 Consolas,
 'Andale Mono',
@@ -44,3 +46,5 @@ Courier,
 monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+$base__border: 1px solid #e1e1e1;

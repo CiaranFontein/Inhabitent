@@ -34,7 +34,7 @@ get_header(); ?>
                         <?php echo $term->description ?>
                     </p>
                     <p>
-                        <a href="<?php get_post_permalink(get_the_ID()); ?>" class="btn">
+                        <a href="<?php get_term_link($term); ?>" class="btn">
                             <?php echo $term->slug . " stuff" ?> </a>
                     </p>
                 </div>

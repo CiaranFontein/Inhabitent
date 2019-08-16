@@ -7,7 +7,7 @@
 
 ?>
 
-</div><!-- #content -->
+</div><!-- site-content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
     <div class="footer-block-elements container">
@@ -28,7 +28,7 @@
                     <span><i class="fa fa-google-plus-square"></i></span>
                 </p>
             </div><!-- contact -->
-        </div><!-- contact-info block element-->
+        </div><!-- contact-info footer-block-element-->
         <div class="footer-block-element">
             <div class="business-hours">
                 <h3>Business Hours</h3>
@@ -49,7 +49,6 @@
     </div><!-- contact elements -->
 
     <div class="copyright-message">COPYRIGHT © 2019 INHABITENT</div>
-    </div>
 
     <div class="site-info">
     </div><!-- .site-info -->

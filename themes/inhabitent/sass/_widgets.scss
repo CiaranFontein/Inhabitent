@@ -3,11 +3,30 @@
 --------------------------------------------------------------*/
 
 .widget {
-  margin: 0 0 $base__space-unit;
+  margin: 0 0 3rem;
+
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
 
   /* Make sure select elements fit in widgets. */
   select {
     max-width: 100%;
+  }
+
+  .contact-meta {
+    i {
+      line-height: 1.8;
+      margin-right: .5rem;
+      width: 20px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 

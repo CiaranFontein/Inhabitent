@@ -11,6 +11,12 @@
   flex: 1 0 auto;
 }
 
+.home .site-content,
+.page-about .site-content,
+.single-adventure .site-content {
+  padding-top: 0;
+}
+
 .content-area {
   width: 100%;
 }
@@ -25,23 +31,35 @@
   width: 1120px;
 }
 
-.site-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.page-about .entry-content h1 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.home .site-content,
+.page-about .site-content,
+.single-adventure .site-content {
+  padding-top: 0;
 }
 
 .site-header {
-  background-color: hsla(0, 0%, 100%, .85);
-  border-bottom: 1px solid #e1e1e1;
-  padding: .5rem 0;
+  background-color: rgba(255, 255, 255, .85);
+  border-bottom: $base__border;
+  padding: ($base__space-unit / 3) 0;
   position: fixed;
-  transition: top .5s linear;
+  transition: top 500ms linear;
   width: 100%;
-  z-index: 3;
+  z-index: 500;
+
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 
   h1 {
-    background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+    background: url('../../images/inhabitent-logo-tent.svg') no-repeat;
     background-size: 50px 33px;
     height: 33px;
     margin: 0;
@@ -51,10 +69,37 @@
     width: 50px;
   }
 
-  .container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+  // Style transitioning for hero image page-numbers
+  &.reverse-header {
+    background-color: transparent;
+    border-bottom: 0;
+    position: absolute;
+    text-shadow: 1px 1px 2px rgb(50, 50, 50);
+
+    h1 {
+      background: url('../../images/inhabitent-logo-tent-white.svg') no-repeat;
+      background-size: 50px 33px;
+    }
+
+    .main-navigation {
+      a {
+        color: white;
+
+        &:hover {
+          color: $color_yellow_brand;
+        }
+      }
+    }
+
+    .header-search {
+      input[type="search"] {
+        color: white;
+
+        &::-webkit-input-placeholder {
+          color: $color_yellow_brand !important;
+        }
+      }
+    }
   }
 }
 
@@ -121,14 +166,49 @@
   height: 100vh;
 }
 
-.black-button {
-  border: 1px solid #000;
-  color: #000;
+.entry-content,
+.entry-summary,
+.page-content {
+  margin: 1.5rem 0 0;
 }
 
-.black-button,
-.white-button {
-  background-color: transparent;
+.page-about .entry-content {
+  margin-top: 0;
+}
+
+.page-about .entry-content h2 {
+  text-align: center;
+}
+
+.page-about .entry-content>:not(header) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+body:not(.home):not(.page-about):not(.single-adventure) .content-area,
+body:not(.home):not(.page-about):not(.single-adventure) .widget-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
+  padding-left: 5%;
+  width: 27%;
+}
+
+body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .content-area {
+  border-right: 1px solid #e1e1e1;
+  padding-right: 5%;
+  width: 73%;
+}
+
+body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px;
 }
 
 .entry-title,
@@ -189,9 +269,9 @@
 
   .latest-entries {
     border: 1px solid #e1e1e1;
-    -ms-flex: 0 1 32%;
     flex: 0 1 32%;
     position: relative;
+    margin-bottom: 4.5rem;
 
     ul {
       display: -ms-flexbox;
@@ -270,11 +350,6 @@
   bottom: 10px;
   right: 325px;
   padding: 5px;
-}
-
-.entry-content {
-  text-align: center;
-  width: auto;
 }
 
 .sticky {

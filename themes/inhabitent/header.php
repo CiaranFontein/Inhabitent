@@ -25,7 +25,6 @@
         <header id="masthead" class="site-header" role="banner">
             <div class="container">
                 <div id="site-branding">
-
                     <div class='logo'>
                         <a href="https://localhost:8888/inhabitent/" rel="home">
                             <h1 class="site-title">Inhabitent</h1>
@@ -38,10 +37,11 @@
                             aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
                     </div>
+                    <div class="header-search">
+                        <?php get_search_form(); ?>
+                    </div>
                 </nav><!-- #site-navigation -->
-                <div class="search-bar">
-                    <?php get_search_form(); ?>
-                </div>
+
             </div><!-- #container -->
         </header><!-- #masthead -->
 

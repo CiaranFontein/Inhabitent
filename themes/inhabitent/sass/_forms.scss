@@ -66,20 +66,22 @@ input[type="password"],
 input[type="search"],
 textarea {
     color: #666;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    background-color: #f4f4f4;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
 
     &:focus {
         color: #111;
+        outline: none;
     }
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
-    padding: 3px;
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=text],
+input[type=url] {
+    padding: .3rem;
 }
 
 textarea {
@@ -87,20 +89,65 @@ textarea {
     width: 100%;
 }
 
-.label {
-    color: #2f1339;
+fieldset {
+    border: 0;
+    padding: 0;
+    padding-bottom: $base__space-unit / 2;
+    margin: 0;
+}
+
+label {
+    color: $color_purple_brand;
     display: block;
-    font-family: Novecento Sans Web, sans-serif;
-    font-size: 17.6px;
-    font-size: 1.1rem;
-    margin-bottom: .5rem;
+    font-family: $font__alt;
+    @include font-size(1.1);
+    margin-bottom: $base__space-unit / 3;
     text-transform: uppercase;
+
+    .error404 & {
+        display: inline-block;
+    }
+}
+
+.search-field {
+    transition: 0.2s all ease-in-out;
+    width: 0px;
+
+    &--active {
+        display: block;
+        width: 150px;
+    }
 }
 
 .header-search {
+    line-height: 1;
+    padding-left: 1.5rem;
+
     label {
-        display: none;
-        float: left;
         margin: 0;
+        width: 0px;
     }
+
+    input[type=search] {
+        border: 0;
+        background: transparent;
+        font-family: Novecento Sans Web,
+            sans-serif;
+        margin-left: .75rem;
+        padding: 0 .3rem;
+        text-transform: uppercase;
+    }
+
+    .search-toggle {
+        color: #248a83;
+        padding-top: .33rem;
+    }
+
+    fieldset {
+        padding: 0;
+    }
+}
+
+input:focus {
+    outline: none;
 }
