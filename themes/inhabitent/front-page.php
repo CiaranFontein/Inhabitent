@@ -18,11 +18,12 @@ get_header(); ?>
                 <?php
                 $arg = [
                     'taxonomy' => 'product-type',
-                    'hide_empty' => true
+                    'hide_empty' => false
                 ];
                 $terms = get_terms($arg);
 
                 foreach($terms as $term){
+
                     ?>
                 <div class="product-type-block-wrapper">
                     <?php
@@ -34,7 +35,7 @@ get_header(); ?>
                         <?php echo $term->description ?>
                     </p>
                     <p>
-                        <a href="<?php get_term_link($term); ?>" class="btn">
+                        <a href="<?php echo get_term_link($term); ?>" class="btn">
                             <?php echo $term->slug . " stuff" ?> </a>
                     </p>
                 </div>

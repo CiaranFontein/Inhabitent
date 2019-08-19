@@ -12,36 +12,17 @@ get_header(); ?>
         <div class="container">
             <?php if ( have_posts() ) : ?>
             <header class="page-header">
-                <h1>Shop Stuff</h1>
-                <ul class="product-type-list">
-
-                    <?php
-                $arg = [
-                    'taxonomy' => 'product-type',
-                    'hide_empty' => false
-                ];
-                $terms = get_terms($arg);
-
-                foreach($terms as $term){
-
-					?>
-                    <li>
-                        <p>
-                            <a href="<?php echo get_term_link($term)?>">
-                                <?php echo $term->slug ?>
-                            </a>
-                        </p>
-                    </li>
-                    <?php
-                };
-            	?>
-
-                </ul>
+                <h1><?php echo substr(get_the_archive_title(), 13) ?></h1>
+                <div class="taxonomy-description">
+                    <p>
+                        <?php echo term_description(); ?>
+                    </p>
+                </div>
             </header><!-- .page-header -->
             <div class="product-grid">
                 <?php while ( have_posts() ) : the_post(); ?>
                 <div class="product-grid-item">
-                    <div class="thumbnail-wrapper">
+                    <div class="thumbnail-wrapper product-grid-item">
                         <a href="<?php echo the_permalink() ?>">
                             <?php the_post_thumbnail() ?>
                         </a>
@@ -57,4 +38,5 @@ get_header(); ?>
         </div><!-- #container -->
     </main><!-- #main -->
 </div><!-- #primary -->
+
 <?php get_footer(); ?>

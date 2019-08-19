@@ -88,7 +88,9 @@ function red_starter_scripts() {
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('searchToggle', get_template_directory_uri() . '/build/js/searchToggle.min.js', array('jquery'), '', true );
-	
+	wp_enqueue_script('inverseHeader', get_template_directory_uri() . '/build/js/inverseHeader.min.js', array('jquery'), '', true );
+
+
 	wp_enqueue_script( 'red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true );
 
@@ -97,6 +99,12 @@ function red_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+
+function page_menu_args( $args ) {
+    $args['show_home'] = false;
+    return $args;
+}
+add_filter( 'wp_page_menu_args', 'page_menu_args' );
 
 /**
  * Custom template tags for this theme.

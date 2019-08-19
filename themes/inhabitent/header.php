@@ -20,9 +20,10 @@
 
 <body <?php body_class(); ?>>
     <div id="page" class="hfeed site">
-        <a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
+        <a class="skip-link screen-reader-text" href="#content"
+            onclick="return false;"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-        <header id="masthead" class="site-header" role="banner">
+        <header id="masthead" class="site-header reverse-header" role="banner">
             <div class="container">
                 <div id="site-branding">
                     <div class='logo'>
@@ -35,7 +36,7 @@
                     <div class="menu-main-navigation-container">
                         <button class="menu-toggle" aria-controls="primary-menu"
                             aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
-                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                        <?php wp_nav_menu( array( 'echo' => true,'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
                     </div>
                     <div class="header-search">
                         <?php get_search_form(); ?>

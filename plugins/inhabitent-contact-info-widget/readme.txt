@@ -1,6 +1,6 @@
-=== Widget Name ===
+=== Inhabitent Contact Info Widget ===
 
-Contributors: username1, username2 (this should be a list of wordpress.org userid's)
+Contributors: ciaranfontein
 Donate link: http://example.com/
 Tags: widget, boilerplate
 Requires at least: 3.3.1

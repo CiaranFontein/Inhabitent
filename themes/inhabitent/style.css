@@ -549,7 +549,6 @@ fieldset {
 
 label {
   color: #2f1339;
-  display: block;
   font-family: "Novecento Sans Web", sans-serif;
   font-size: 17.6px;
   font-size: 1.1rem;
@@ -563,8 +562,8 @@ label {
   transition: 0.2s all ease-in-out;
   width: 0px; }
   .search-field--active {
-    display: block;
-    width: 150px; }
+    display: inline-block;
+    width: 170px; }
 
 .header-search {
   line-height: 1;
@@ -620,7 +619,7 @@ a {
     padding-left: 1.5rem;
     position: relative; }
   .main-navigation a {
-    display: block;
+    display: inline-block;
     text-decoration: none; }
   .main-navigation .menu-toggle,
   .main-navigation .main-navigation.toggled ul {
@@ -730,8 +729,9 @@ a {
     padding-left: 0; }
 
 .widget-area {
-  width: 25%;
-  border-left: 2px solid #e1e1e1; }
+  width: 27%;
+  border-left: 2px solid #e1e1e1;
+  padding-left: 5%; }
 
 /* Search widget. */
 .widget_search .search-submit {
@@ -868,8 +868,7 @@ a {
 .copyright-message {
   padding: 1.5rem 0px;
   color: #fff;
-  text-align: center;
-  margin: 0px -107px 0px 0px; }
+  text-align: center; }
 
 .hero-image-header {
   width: 100%;
@@ -896,7 +895,7 @@ body:not(.home):not(.page-about):not(.single-adventure) .widget-area {
   padding-top: 3rem;
   padding-bottom: 3rem; }
 
-body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
+body:not(.home):not(.page-about):not(.post-type-archive):not(.taxonomy-product-type):not(.single-product):not(.single-adventure) .widget-area {
   padding-left: 5%;
   width: 27%; }
 
@@ -1077,6 +1076,133 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 
 .bypostauthor {
   display: block; }
+
+/* Products */
+.post-type-archive-product .page-header,
+.tax-product-type .page-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  text-align: center; }
+
+.product-type-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Novecento Sans Web", sans-serif;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase; }
+  .product-type-list li {
+    margin: 0 1.5rem; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem; }
+
+.product-grid-item {
+  border: 1px solid #e1e1e1; }
+  .product-grid-item .thumbnail-wrapper {
+    background-color: #e1e1e1;
+    height: 250px;
+    overflow: hidden;
+    position: relative; }
+  .product-grid-item .wp-post-image {
+    left: 50%;
+    max-height: 250px;
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -52%);
+            transform: translate(-50%, -52%);
+    width: auto; }
+  .product-grid-item .product-info {
+    font-size: 14.4px;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem; }
+  .product-grid-item .entry-title {
+    background: white;
+    display: inline;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "Merriweather Web", serif;
+    letter-spacing: 0;
+    line-height: 1.75;
+    padding-right: 0.25rem;
+    text-transform: none; }
+    .product-grid-item .entry-title:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: '...................................................'; }
+  .product-grid-item .price {
+    float: right;
+    padding-left: 0.25rem;
+    background: white; }
+
+.taxonomy-description {
+  margin: 2rem auto 3rem;
+  max-width: 800px; }
+
+/* Single Product Posts */
+.single-product .hentry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .single-product .hentry .product-image-wrapper,
+  .single-product .hentry .product-content-wrapper {
+    width: 48%; }
+  .single-product .hentry .entry-title {
+    color: #d99054; }
+  .single-product .hentry .entry-content {
+    margin-top: 0; }
+  .single-product .hentry .price {
+    font-family: "Novecento Sans Web", sans-serif;
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    margin-top: 0;
+    text-transform: uppercase; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h1,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h2,
+.blog .entry-header h1,
+.blog .entry-header h2,
+.single-post .entry-header h1,
+.single-post .entry-header h2 {
+  background-color: #248a83;
+  color: #fff;
+  font-size: 33.6px;
+  font-size: 2.1rem;
+  left: 0;
+  padding: .75rem 1.5rem;
+  position: absolute;
+  margin-top: 2.25rem;
+  max-width: 75%;
+  top: 0; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta,
+.blog .entry-meta,
+.single-post .entry-meta {
+  background-color: #248a83;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: Novecento Sans Web, sans-serif;
+  padding: 1.00005rem 1.5rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Media
