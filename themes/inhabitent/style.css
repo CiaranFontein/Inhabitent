@@ -1204,6 +1204,36 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   right: 0;
   text-transform: uppercase; }
 
+.adventures-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 30px; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header a,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a,
+.blog .entry-header a,
+.blog .entry-meta a,
+.single-post .entry-header a,
+.single-post .entry-meta a {
+  color: #fff; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header,
+.blog .entry-header,
+.single-post .entry-header {
+  line-height: 0;
+  position: relative; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

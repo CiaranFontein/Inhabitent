@@ -95,6 +95,10 @@ get_header(); ?>
                 </ul>
             </div><!-- #container -->
         </section><!-- #section latest-entries-->
+        <section class="adventures-container">
+            <h2>Latest Adventures</h2>
+            <img src="./wp-content/themes/inhabitent/images/LatestAdventures.png">
+        </section>
     </main><!-- #main -->
 </div><!-- #primary -->
 
