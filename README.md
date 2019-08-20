@@ -1,5 +1,7 @@
 # Inhabitent
 
+Wordpress site for a camping gear supplier.
+
 ## Custom Widgets
 
 ### Business Hours
