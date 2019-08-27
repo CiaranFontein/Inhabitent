@@ -49,7 +49,7 @@ get_header(); ?>
                 <h2> Inhabitent Journal </h2>
                 <?php
                         $args = array(
-                            'post-type' => 'post',
+                            'post_type' => 'post',
                             'posts_per_page' => 3
                         );
                     $query = new WP_Query($args);
@@ -64,7 +64,7 @@ get_header(); ?>
                                 class="wp-post-image attachment-large size-large" />
                         </div>
                         <div class="post-info-wrapper">
-                            <span class="entry-meta">
+                            <span class="entry-metafront-page-meta">
                                 <span class="posted-on">
                                     <time class="posted-on published">
                                         <?php 
@@ -95,9 +95,72 @@ get_header(); ?>
                 </ul>
             </div><!-- #container -->
         </section><!-- #section latest-entries-->
-        <section class="adventures-container">
+        <section class="adventures-container container">
             <h2>Latest Adventures</h2>
-            <img src="./wp-content/themes/inhabitent/images/LatestAdventures.png">
+            <?php
+                $adventuresCount = 0;
+                        $adv_args = array(
+                            'post_type' => 'adventure',
+                            'posts_per_page' => 4
+                        );
+                    $adv_query = new WP_Query($adv_args);
+                    ?>
+            <div class="adventures-grid">
+                <?php
+                        if ( $adv_query->have_posts() ) : ?>
+                <?php while ( $adv_query->have_posts() ) : $adv_query->the_post(); ?>
+                <?php
+                    $adventuresCount+=1;
+                    switch($adventuresCount){
+                        case 1: ?>
+                <div class="one adventure-cell">
+                    <div class="header">
+                        <h3><?php echo get_the_title() ?></h3>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <img src="<?php echo the_post_thumbnail_url() ?>">
+
+                </div>
+                <?php break;
+                case 2: ?>
+                <div class="two adventure-cell">
+                    <div class="header">
+                        <h3><?php echo get_the_title() ?></h3>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <img src="<?php echo the_post_thumbnail_url() ?>">
+
+                </div>
+                <?php break;
+                case 3: ?>
+                <div class="three adventure-cell">
+                    <div class="header">
+                        <h3><?php echo get_the_title() ?></h3>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <img src="<?php echo the_post_thumbnail_url() ?>">
+                </div>
+                <?php break;
+                case 4: ?>
+                <div class="four adventure-cell">
+                    <div class="header">
+                        <h3><?php echo get_the_title() ?></h3>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                    <img src="<?php echo the_post_thumbnail_url() ?>">
+                </div>
+                <?php break;
+                }
+                
+                endwhile;
+                else : ?>
+                <h2>Nothing found!</h2>
+                <?php endif; ?>
+                <p class="see-more">
+                    <a href="https://inhabitent.com/adventures" class="btn">More Adventures</a>
+                </p>
+
+            </div>
         </section>
     </main><!-- #main -->
 </div><!-- #primary -->

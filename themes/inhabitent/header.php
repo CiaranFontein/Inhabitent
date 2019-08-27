@@ -23,7 +23,7 @@
         <a class="skip-link screen-reader-text" href="#content"
             onclick="return false;"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-        <header id="masthead" class="site-header reverse-header" role="banner">
+        <header id="masthead" class="site-header" role="banner">
             <div class="container">
                 <div id="site-branding">
                     <div class='logo'>

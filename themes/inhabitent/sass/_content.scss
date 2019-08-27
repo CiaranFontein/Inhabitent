@@ -342,7 +342,6 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   text-overflow: wrap;
   top: 30px;
   font-size: 2.25rem;
-  padding: 20px;
 }
 
 .entry-meta {
@@ -533,6 +532,7 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-meta,
 .blog .entry-meta,
 .single-post .entry-meta {
+
   background-color: #248a83;
   bottom: 0;
   color: #fff;
@@ -548,9 +548,76 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding-bottom: 30px;
+
+  .adventures-grid {
+    display: grid;
+    padding-bottom: 10px;
+    max-width: none;
+    max-height: 575px;
+    grid-gap: 25px;
+    grid-template-areas:
+      'one one two two'
+      'one one three four';
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    .adventure-cell {
+      position: relative;
+      height: 100%;
+      width: 100%;
+
+      h3 {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        color: #FFF;
+
+        &:hover {
+          color: yellow;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .header {
+        position: relative;
+        top: 5%;
+
+        a {
+          position: absolute;
+          top: 0%;
+          left: 20%;
+        }
+      }
+
+      &.one {
+        grid-area: one;
+        font-size: 3rem;
+      }
+
+      &.two {
+        grid-area: two;
+        font-size: 1.8rem;
+      }
+
+      &.three {
+        font-size: 1.4rem;
+        grid-area: three;
+      }
+
+      &.four {
+        font-size: 1.4rem;
+        grid-area: four;
+      }
+    }
+  }
 }
+
 
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-header a,
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a,

@@ -418,7 +418,8 @@ dd {
   margin: 0 1.5rem 1.5rem; }
 
 img {
-  height: auto; }
+  height: auto;
+  width: 100%; }
 
 img[src*=".svg"],
 table {
@@ -1035,8 +1036,7 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   max-width: 400px;
   text-overflow: wrap;
   top: 30px;
-  font-size: 2.25rem;
-  padding: 20px; }
+  font-size: 2.25rem; }
 
 .entry-meta {
   bottom: 10px;
@@ -1215,10 +1215,51 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 30px; }
+  .adventures-container .adventures-grid {
+    display: grid;
+    padding-bottom: 10px;
+    max-width: none;
+    max-height: 575px;
+    grid-gap: 25px;
+    grid-template-areas: 'one one two two' 'one one three four';
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .adventures-container .adventures-grid .adventure-cell {
+      position: relative;
+      height: 100%;
+      width: 100%; }
+      .adventures-container .adventures-grid .adventure-cell h3 {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        color: #FFF; }
+        .adventures-container .adventures-grid .adventure-cell h3:hover {
+          color: yellow; }
+      .adventures-container .adventures-grid .adventure-cell img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        height: 100%;
+        width: 100%; }
+      .adventures-container .adventures-grid .adventure-cell .header {
+        position: relative;
+        top: 5%; }
+        .adventures-container .adventures-grid .adventure-cell .header a {
+          position: absolute;
+          top: 0%;
+          left: 20%; }
+      .adventures-container .adventures-grid .adventure-cell.one {
+        grid-area: one;
+        font-size: 3rem; }
+      .adventures-container .adventures-grid .adventure-cell.two {
+        grid-area: two;
+        font-size: 1.8rem; }
+      .adventures-container .adventures-grid .adventure-cell.three {
+        font-size: 1.4rem;
+        grid-area: three; }
+      .adventures-container .adventures-grid .adventure-cell.four {
+        font-size: 1.4rem;
+        grid-area: four; }
 
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-header a,
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a,

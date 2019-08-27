@@ -91,7 +91,7 @@ function inhabitent_cpt_adventure() {
 		'not_found'             => 'Not found',
 		'not_found_in_trash'    => 'Not found in Trash',
 		'featured_image'        => 'Adventure Image',
-		'set_featured_image'    => 'Set product image',
+		'set_featured_image'    => 'Set adventure image',
 		'remove_featured_image' => 'Remove adventure image',
 		'use_featured_image'    => 'Use as adventure image',
 		'insert_into_item'      => 'Insert into adventure',
@@ -119,12 +119,6 @@ function inhabitent_cpt_adventure() {
         'publicly_queryable'    => true,
 		'capability_type'       => 'post',
         'show_in_rest'          => true, 
-        'template_lock'         => 'all',
-        'template'              => array(
-            array('core/paragraph', array(
-                'placeholder' => 'Add the adventure description here.'
-            )),
-        )
 	);
 	register_post_type( 'adventure', $args );
 

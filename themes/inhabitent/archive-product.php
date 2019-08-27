@@ -48,7 +48,7 @@ get_header(); ?>
                     </div>
                     <div class="product-info">
                         <h2 class="entry-title"><?php echo the_title() ?><h2>
-                                <span class="price"><?php echo get_post_field(price) ?></span>
+                                <span class="price"><?php echo get_post_field('price') ?></span>
                     </div>
                 </div>
                 <?php endwhile; ?>
