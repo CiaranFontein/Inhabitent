@@ -1235,7 +1235,7 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
         left: 5%;
         color: #FFF; }
         .adventures-container .adventures-grid .adventure-cell h3:hover {
-          color: yellow; }
+          color: #f0e4d1; }
       .adventures-container .adventures-grid .adventure-cell img {
         -o-object-fit: cover;
            object-fit: cover;
@@ -1246,20 +1246,28 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
         top: 5%; }
         .adventures-container .adventures-grid .adventure-cell .header a {
           position: absolute;
-          top: 0%;
-          left: 20%; }
+          top: 100px;
+          left: 20px; }
       .adventures-container .adventures-grid .adventure-cell.one {
-        grid-area: one;
-        font-size: 3rem; }
+        grid-area: one; }
+        .adventures-container .adventures-grid .adventure-cell.one .header a {
+          top: 200px; }
+        .adventures-container .adventures-grid .adventure-cell.one h3 {
+          font-size: 3rem; }
       .adventures-container .adventures-grid .adventure-cell.two {
-        grid-area: two;
-        font-size: 1.8rem; }
+        grid-area: two; }
+        .adventures-container .adventures-grid .adventure-cell.two .header a {
+          top: 120px; }
+        .adventures-container .adventures-grid .adventure-cell.two h3 {
+          font-size: 1.6rem; }
       .adventures-container .adventures-grid .adventure-cell.three {
-        font-size: 1.4rem;
         grid-area: three; }
+        .adventures-container .adventures-grid .adventure-cell.three h3 {
+          font-size: 1.2rem; }
       .adventures-container .adventures-grid .adventure-cell.four {
-        font-size: 1.4rem;
         grid-area: four; }
+        .adventures-container .adventures-grid .adventure-cell.four h3 {
+          font-size: 1.2rem; }
 
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-header a,
 .archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a,
@@ -1274,6 +1282,9 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 .single-post .entry-header {
   line-height: 0;
   position: relative; }
+
+.bumper {
+  height: 80px; }
 
 /*--------------------------------------------------------------
 # Media

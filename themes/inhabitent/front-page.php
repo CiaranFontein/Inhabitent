@@ -116,7 +116,7 @@ get_header(); ?>
                 <div class="one adventure-cell">
                     <div class="header">
                         <h3><?php echo get_the_title() ?></h3>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn white-btn">Read More</a>
                     </div>
                     <img src="<?php echo the_post_thumbnail_url() ?>">
 
@@ -126,7 +126,7 @@ get_header(); ?>
                 <div class="two adventure-cell">
                     <div class="header">
                         <h3><?php echo get_the_title() ?></h3>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn white-btn">Read More</a>
                     </div>
                     <img src="<?php echo the_post_thumbnail_url() ?>">
 
@@ -136,7 +136,7 @@ get_header(); ?>
                 <div class="three adventure-cell">
                     <div class="header">
                         <h3><?php echo get_the_title() ?></h3>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn white-btn">Read More</a>
                     </div>
                     <img src="<?php echo the_post_thumbnail_url() ?>">
                 </div>
@@ -145,7 +145,7 @@ get_header(); ?>
                 <div class="four adventure-cell">
                     <div class="header">
                         <h3><?php echo get_the_title() ?></h3>
-                        <a href="#" class="btn">Read More</a>
+                        <a href="#" class="btn white-btn">Read More</a>
                     </div>
                     <img src="<?php echo the_post_thumbnail_url() ?>">
                 </div>
@@ -161,6 +161,7 @@ get_header(); ?>
                 </p>
 
             </div>
+            <div class="bumper"></div>
         </section>
     </main><!-- #main -->
 </div><!-- #primary -->

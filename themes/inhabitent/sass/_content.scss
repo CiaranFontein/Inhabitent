@@ -574,7 +574,7 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
         color: #FFF;
 
         &:hover {
-          color: yellow;
+          color: $color_yellow_brand;
         }
       }
 
@@ -590,28 +590,52 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 
         a {
           position: absolute;
-          top: 0%;
-          left: 20%;
+          top: 100px;
+          left: 20px;
         }
       }
 
       &.one {
         grid-area: one;
-        font-size: 3rem;
+
+        .header {
+          a {
+            top: 200px;
+          }
+        }
+
+        h3 {
+          font-size: 3rem;
+        }
       }
 
       &.two {
         grid-area: two;
-        font-size: 1.8rem;
+
+        .header {
+          a {
+            top: 120px;
+          }
+        }
+
+        h3 {
+          font-size: 1.6rem;
+        }
       }
 
       &.three {
-        font-size: 1.4rem;
+        h3 {
+          font-size: 1.2rem;
+        }
+
         grid-area: three;
       }
 
       &.four {
-        font-size: 1.4rem;
+        h3 {
+          font-size: 1.2rem;
+        }
+
         grid-area: four;
       }
     }
@@ -633,4 +657,8 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 .single-post .entry-header {
   line-height: 0;
   position: relative;
+}
+
+.bumper {
+  height: 80px;
 }
