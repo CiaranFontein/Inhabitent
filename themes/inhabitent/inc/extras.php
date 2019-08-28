@@ -35,7 +35,7 @@ function set_login_logo(){
 add_action('login_head', 'set_login_logo');
 
 function set_login_logo_destination(){
-	return get_bloginfo('url');
+	return home_url();
 }
 add_filter('login_headerurl', 'set_login_logo_destination');
 

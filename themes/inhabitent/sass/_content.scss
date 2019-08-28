@@ -215,6 +215,12 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   margin-top: 0;
 }
 
+.entry-title,
+.page-title orange {
+  color: #d99054;
+}
+
+
 /* Home */
 .home-hero {
   align-items: center;
@@ -431,6 +437,7 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 .product-grid-item {
   border: $base__border;
 
+
   .thumbnail-wrapper {
     background-color: #e1e1e1;
     height: 250px;
@@ -451,6 +458,10 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
   .product-info {
     @include font-size(0.9);
     padding: ($base__space-unit / 2) round($base__space-unit * 0.667);
+
+    h2 {
+      color: #000;
+    }
   }
 
   .entry-title {
@@ -675,4 +686,38 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
       }
     }
   }
+}
+
+.entry-content {
+  .single-product p .price {
+    font-family: 'Novecento Sans Web', sans-serif;
+    font-size: 28.8px;
+    font-size: 1.8rem;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+}
+
+article {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  &.single-product {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+  }
+}
+
+.single-product {
+
+  .product-content-wrapper,
+  .product-image-wrapper {
+    width: 48%;
+  }
+}
+
+.hentry {
+  margin: 0 0 4.5rem;
 }

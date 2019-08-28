@@ -100,6 +100,12 @@ function red_starter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
+add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
+
+function tthq_add_custom_fa_css() {
+wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
+}
+
 function page_menu_args( $args ) {
     $args['show_home'] = false;
     return $args;

@@ -15,17 +15,17 @@
             <div class="contact">
                 <h3>Contact Info</h3>
                 <p>
-                    <i class="fa fa-envelope"></i>
+                    <i class="fas fa-envelope"></i>
                     <a href="mailto:ciaranfontein@gmail.com">info@inhabitent.com</a>
                 </p>
                 <p>
-                    <i class="fa fa-phone"></i>
+                    <i class="fas fa-phone"></i>
                     <a href="tel:5553434567891">778-456-7891</a>
                 </p>
                 <p>
-                    <span><i class="fa fa-facebook-square"></i></span>
-                    <span><i class="fa fa-twitter-square"></i></span>
-                    <span><i class="fa fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
                 </p>
             </div><!-- contact -->
         </div><!-- contact-info footer-block-element-->
