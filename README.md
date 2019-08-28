@@ -1,6 +1,7 @@
 # Inhabitent
 
 Wordpress site for a camping gear supplier.
+![alt text](https://github.com/CiaranFontein/Inhabitent/blob/master/themes/inhabitent/screenshots/Screen%20Shot%202019-08-26%20at%206.23.57%20PM.png "Homepage Banner")
 
 ## Custom Widgets
 
