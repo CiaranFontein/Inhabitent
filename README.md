@@ -27,7 +27,7 @@ Product post type with price field and organized categories and taxonomies
 
 Custom post type with links to archives displayed in a funky grid on front-page.php
 
-![alt text](https://github.com/CiaranFontein/Inhabitent/blob/master/themes/inhabitent/screenshots/Screen%20Shot%202019-08-27 at%205.46.59%20PM.png)
+![alt text](https://github.com/CiaranFontein/Inhabitent/blob/master/themes/inhabitent/screenshots/Screen%20Shot%202019-08-27%20at%205.46.59%20PM.png)
 
 ## Dynamic Nav Bar
 
