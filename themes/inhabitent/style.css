@@ -1286,6 +1286,12 @@ body:not(.home):not(.page-about):not(.post-type-archive):not(.tax-product-type):
 .bumper {
   height: 80px; }
 
+.error404 .search-404 .search-form a {
+  display: none; }
+
+.error404 .search-404 .search-form .search-field {
+  width: 200px; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
