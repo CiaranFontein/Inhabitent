@@ -7,7 +7,9 @@ Wordpress site for a camping gear supplier.
 ### Business Hours
 
 Gives administrators easy access to adjusting the business hours
+
 ### Contact Info
+
 Gives administrators easy access to adjusting the contact info
 
 ## Custom Post Types
@@ -18,12 +20,14 @@ Product post type with price field and organized categories and taxonomies
 
 ### Adventures
 
-"Beautiful" - Tal
+Custom post type with links to archives displayed in a funky grid on front-page.php
 
 ## Dynamic Nav Bar
 
 ### Changes colour
+
 Nav bar changes once the user scrolls past the hero headers on certain pages
 
 ### Hidden Search Form
+
 Clicking the magnifying glass reveals the search form in a smooth as butter animation
